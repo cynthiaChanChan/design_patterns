@@ -1,17 +1,11 @@
-var Shopper = require("./Shopper");
+var scout_prototype = require("./scout_prototype");
 
-var cindy = new Shopper("Cindy");
-cindy.addItemToList("camping knife");
-cindy.addItemToList("tent");
-cindy.addItemToList("backpack");
-cindy.addItemToList("map");
+var cindy = scout_prototype.clone();
+cindy.name = "Cindy";
 cindy.addItemToList("slingshot");
 
-var angela = new Shopper("Angela");
-angela.addItemToList("camping knife");
-angela.addItemToList("tent");
-angela.addItemToList("backpack");
-angela.addItemToList("map");
+var angela = scout_prototype.clone();
+angela.name = "Angela";
 angela.addItemToList("reading light");
 
 console.log(`${cindy.name}: ${cindy.shoppingList}`);
